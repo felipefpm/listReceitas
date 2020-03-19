@@ -1,12 +1,5 @@
-# listReceitas
-Site com sistema de receitas.
-
- - Inclusão
- - Exclusão
- - Visualização
- - Edição
+# frontend
 
 Utilizando as seguintes tecnologias.
 
- - ReactJS (Front)
- - Consumo API REST
+ - ReactJS
