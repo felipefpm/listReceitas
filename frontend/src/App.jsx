@@ -1,8 +1,7 @@
 import React from "react";
-import "./App.css";
 
-function App() {
-  return <div className="App">Hello Word </div>;
-}
+import Routes from "./Routes";
+
+const App = () => <Routes />;
 
 export default App;
