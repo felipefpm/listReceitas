@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    background-color: #ddd;
+}
+
+body,
+input,
+button {
+    font-family: Arial, Helvetica, sans-serif;
+}

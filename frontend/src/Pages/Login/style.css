@@ -1,0 +1,81 @@
+.logo {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    width: 100%;
+    max-width: 300px;
+    background-color: rgba(221, 221, 221, 0.767);
+    padding-top: 8px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.dev {
+    font-size: 40px;
+    font-weight: 600;
+    font-style: italic;
+    color: #DF4723;
+}
+
+.food {
+    font-size: 25px;
+    color: #fff;
+    bottom: 0;
+}
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    background-image: url("../../Assets/fundoReceita.png");
+}
+
+.login-container form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+    height: 160px;
+    background-color: rgba(221, 221, 221, 0.767);
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.login-container form span {
+    margin-top: 8px;
+    padding: 3px;
+    font-size: 9px;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+.login-container form input {
+    margin-top: 2px;
+    height: 25px;
+    padding: 5px;
+    border: 0;
+    border-radius: 5px;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+.login-container form button {
+    margin-top: 15px;
+    margin-left: 25px;
+    margin-right: 25px;
+    height: 30px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 15px;
+    background-color: #DF4723;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-container form button:hover {
+    background-color: rgba(253, 118, 87, 0.664);
+}
