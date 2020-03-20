@@ -1,0 +1,71 @@
+.main-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgba(0, 0, 0, 0.623);
+    position: absolute;
+    width: 100%;
+    max-width: 1000px;
+    height: 60px;
+}
+
+.main-dev {
+    font-size: 40px;
+    font-weight: 600;
+    font-style: italic;
+    color: #DF4723;
+}
+
+.main-food {
+    font-size: 25px;
+    color: #fff;
+    bottom: 0;
+}
+
+.main-link {
+    display: flex;
+    width: 450px;
+    justify-content: space-between;
+}
+
+.link,
+.main-name,
+.main-sair {
+    color: #fff;
+    font-size: 15px;
+    margin-left: 30px;
+    text-decoration: none;
+}
+
+.main-info-login {
+    display: flex;
+    width: 210px;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.main-name {
+    color: #DF4723;
+    font-weight: bolder;
+    margin-left: 0px;
+    margin-right: 10px;
+}
+
+.main-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.separator {
+    width: 2px;
+    height: 45px;
+    font-size: 35px;
+    color: #DF4723;
+    padding-left: 15px;
+}
+
+.main-sair:hover {
+    color: #DF4723;
+    text-decoration: underline;
+}
