@@ -1,17 +1,25 @@
 import React, { useState } from "react";
-// import api from "../../Services/api";
+import api from "../../Services/api";
 
 import "./style.css";
 
 function Login({ history }) {
-  const [email, setEmail] = useState("");
-  const [senha, setSenha] = useState("");
+  const [email, setEmail] = useState("felipepinto.fpm@gmail.com");
+  const [senha, setSenha] = useState("an6zfd6j");
 
   async function handleSubmit(e) {
     e.preventDefault();
 
-    // const response = await api.post
-    // const {id} = responde.data;
+    const response = await api.post("/authentication/", {
+      username: email,
+      password: senha
+    });
+
+    const { id } = response.data;
+    const { token } = response.data;
+
+    sessionStorage.setItem("token", token);
+
     history.push(`/receitas`);
   }
 

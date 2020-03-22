@@ -4,6 +4,10 @@ import { NavLink } from "react-router-dom";
 import "./style.css";
 
 export default function Main() {
+  function logout() {
+    sessionStorage.removeItem("token");
+  }
+
   return (
     <>
       <div className="main-container">
@@ -47,7 +51,7 @@ export default function Main() {
             className="main-img"
           />
           <span className="separator">|</span>
-          <NavLink to="/" className="main-sair">
+          <NavLink to="/" className="main-sair" onClick={logout}>
             Sair
           </NavLink>
         </div>

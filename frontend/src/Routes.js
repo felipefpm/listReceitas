@@ -5,7 +5,7 @@ import Login from "./Pages/Login";
 import HomeList from "./Pages/HomeList";
 import MyList from "./Pages/MyList";
 import AddList from "./Pages/AddList";
-import { isAuthenticated } from "./auth";
+import { isAuthenticated } from "./Services/auth";
 
 const PrivateRoute = ({ component: Component, ...rest }) => (
   <Route
@@ -15,7 +15,12 @@ const PrivateRoute = ({ component: Component, ...rest }) => (
         <Component {...props} />
       ) : (
         <Redirect
-          to={{ pathname: "/login", state: { form: props.location } }}
+          to={{
+            pathname: "/",
+            state: {
+              form: props.location
+            }
+          }}
         />
       )
     }
@@ -25,11 +30,11 @@ const PrivateRoute = ({ component: Component, ...rest }) => (
 const Routes = () => (
   <BrowserRouter>
     <Switch>
-      <PrivateRoute exact path="/" component={Login} />
+      <Route exact path="/" component={Login} />
       <PrivateRoute path="/receitas" component={HomeList} />
       <PrivateRoute path="/minhasreceitas" component={MyList} />
       <PrivateRoute path="/novareceita" component={AddList} />
-    </Switch>
+    </Switch>{" "}
   </BrowserRouter>
 );
 
