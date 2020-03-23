@@ -1,50 +1,51 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 import Main from "../../Components/Main";
 import api from "../../Services/api";
 import "./style.css";
 
 function HomeList({ history }) {
+  const [recipe, setRecipe] = useState([]);
   const token = sessionStorage.getItem("token");
+
+  api.defaults.headers.Authorization = `Token ${token}`;
 
   useEffect(() => {
     async function loadRecipes() {
-      const response = await api.get("api/v1/recipe", {
-        headers: {
-          token: token
-        }
-      });
+      const response = await api.get("api/v1/recipe");
+      setRecipe(response.data);
       console.log(response.data);
     }
-
     loadRecipes();
   }, [history]);
 
   return (
     <>
       <Main />
-      <div className="body-container">
-        <div className="inter-content">
-          <div className="contet">
-            <ul>
-              <li className="card-content">
-                <img
-                  src="https://img.elo7.com.br/product/zoom/258B7CB/adesivo-parede-restaurante-prato-feito-comida-caseira-lenha-adesivo-restaurante-fritas-salada.jpg"
-                  alt=""
-                />
+      <div className="inter-content">
+        <div className="contet">
+          <ul>
+            {recipe.map(recipes => (
+              <li className="card-contente" key={recipes.id}>
+                <img src={recipes.category.image} alt={recipes.title} />
                 <footer>
-                  <strong>Receita 01</strong>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Etiam tristique urna nec massa egestas sodales. Nunc et
-                    ipsum at urna molestie porttitor suscipit eget tellus. Morbi
-                    aliquet magna sit amet lectus convallis.
-                  </p>
-                  <button>Detalhes</button>
+                  <strong>{recipes.title}</strong>
+                  <p>{recipes.description}</p>
+                  <button>
+                    <Link
+                      to={{
+                        pathname: `/info/${recipes.id}`
+                      }}
+                      className="button-link"
+                    >
+                      Detalhes
+                    </Link>
+                  </button>
                 </footer>
               </li>
-            </ul>
-          </div>
+            ))}
+          </ul>
         </div>
       </div>
     </>

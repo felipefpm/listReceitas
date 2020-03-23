@@ -3,9 +3,6 @@
     justify-content: center;
     height: 100%;
     width: 100%;
-    background-image: url("../../Assets/fundoReceita.png");
-    background-repeat: repeat;
-
 }
 
 .inter-content {
@@ -29,18 +26,17 @@
     list-style: none;
 }
 
-.card-content {
+.card-contente {
     display: flex;
     flex-direction: column;
     max-width: 300px;
     width: 100%;
     height: 100%;
-    max-height: 280px;
     background-color: rgba(0, 0, 0, 0.623);
     border-radius: 8px;
 }
 
-.card-content img {
+.card-contente img {
     margin-top: 20px;
     margin: 10px;
     margin-top: 15px;
@@ -48,20 +44,20 @@
     height: 100px;
 }
 
-.card-content footer {
+.card-contente footer {
     flex: 1;
     color: #DF4723;
     margin: 15px;
     margin-top: 1px;
 }
 
-.card-content p {
+.card-contente p {
     margin-top: 8px;
     font-size: 13px;
     color: #fff;
 }
 
-.card-content button {
+.card-contente button {
     border: 0;
     width: 80px;
     height: 30px;
@@ -74,6 +70,6 @@
     margin-top: 10px;
 }
 
-.card-content button:hover {
+.card-contente button:hover {
     background-color: rgba(223, 95, 35, 0.705);
 }

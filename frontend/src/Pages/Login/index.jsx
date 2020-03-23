@@ -15,10 +15,14 @@ function Login({ history }) {
       password: senha
     });
 
-    const { id } = response.data;
-    const { token } = response.data;
+    const { token, user, name, image, id } = response.data;
 
     sessionStorage.setItem("token", token);
+    sessionStorage.setItem("name", name);
+    sessionStorage.setItem("image", image);
+    sessionStorage.setItem("id", id);
+
+    api.defaults.headers.Authorization = `Token ${token}`;
 
     history.push(`/receitas`);
   }

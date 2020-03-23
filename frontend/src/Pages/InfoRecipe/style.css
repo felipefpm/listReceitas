@@ -1,0 +1,38 @@
+.inter-content {
+    justify-content: center;
+}
+
+.info-body {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 600px;
+    background-color: rgba(0, 0, 0, 0.623);
+    border-radius: 8px;
+}
+
+.info-body img {
+    margin-top: 25px;
+    margin: 25px;
+    margin-bottom: 10px;
+    margin-top: 15px;
+    width: 550px;
+    height: 200px;
+}
+
+.info-body footer {
+    margin: 15px;
+}
+
+.info-body strong {
+    margin-top: 8px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #DF4723;
+}
+
+.info-body p {
+    margin-top: 8px;
+    font-size: 18px;
+    color: #fff;
+}

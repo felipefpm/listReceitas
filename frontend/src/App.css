@@ -12,7 +12,8 @@ body,
     height: 100%;
     width: 100%;
     justify-content: center;
-    background-color: #ddd;
+    background-image: url("./Assets/fundoReceita.png");
+    background-repeat: repeat;
 }
 
 body,

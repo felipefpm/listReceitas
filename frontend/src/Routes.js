@@ -5,6 +5,8 @@ import Login from "./Pages/Login";
 import HomeList from "./Pages/HomeList";
 import MyList from "./Pages/MyList";
 import AddList from "./Pages/AddList";
+import MyRecipe from "./Pages/MyRecipe";
+import InfoRecipe from "./Pages/InfoRecipe";
 import { isAuthenticated } from "./Services/auth";
 
 const PrivateRoute = ({ component: Component, ...rest }) => (
@@ -33,8 +35,10 @@ const Routes = () => (
       <Route exact path="/" component={Login} />
       <PrivateRoute path="/receitas" component={HomeList} />
       <PrivateRoute path="/minhasreceitas" component={MyList} />
+      <PrivateRoute path="/minhareceita/:id" component={MyRecipe} />
+      <PrivateRoute path="/info/:id" component={InfoRecipe} />
       <PrivateRoute path="/novareceita" component={AddList} />
-    </Switch>{" "}
+    </Switch>
   </BrowserRouter>
 );
 

@@ -4,8 +4,15 @@ import { NavLink } from "react-router-dom";
 import "./style.css";
 
 export default function Main() {
+  const name = sessionStorage.getItem("name");
+  const img = sessionStorage.getItem("image");
+  const id = sessionStorage.getItem("id");
+
   function logout() {
     sessionStorage.removeItem("token");
+    sessionStorage.removeItem("name");
+    sessionStorage.removeItem("image");
+    sessionStorage.removeItem("id");
   }
 
   return (
@@ -45,11 +52,8 @@ export default function Main() {
           </NavLink>
         </div>
         <div className="main-info-login">
-          <span className="main-name">Nome Teste</span>
-          <img
-            src="https://image.freepik.com/fotos-gratis/retrato-de-homem-branco-isolado_53876-40306.jpg"
-            className="main-img"
-          />
+          <span className="main-name">{name}</span>
+          <img src={img} className="main-img" />
           <span className="separator">|</span>
           <NavLink to="/" className="main-sair" onClick={logout}>
             Sair

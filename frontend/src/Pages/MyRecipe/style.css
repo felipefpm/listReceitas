@@ -1,0 +1,105 @@
+.recipe-body {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 600px;
+    margin-top: 150px;
+    margin-bottom: 50px;
+    background-color: rgba(0, 0, 0, 0.623);
+    border-radius: 8px;
+}
+
+.recipe-body img {
+    margin-top: 25px;
+    margin: 25px;
+    margin-bottom: 10px;
+    margin-top: 15px;
+    width: 550px;
+    height: 180px;
+}
+
+.recipe-body footer {
+    margin: 10px;
+}
+
+.recipe-body strong {
+    margin-top: 8px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #DF4723;
+}
+
+.recipe-body p {
+    margin-top: 8px;
+    font-size: 18px;
+    color: #fff;
+}
+
+.alterButton {
+    border: 0;
+    height: 30px;
+    background-color: #DF4723;
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.deleteButton {
+    border: 0;
+    height: 30px;
+    background-color: red;
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.alterButton:hover {
+    background-color: rgba(223, 70, 35, 0.842);
+}
+
+.deleteButton:hover {
+    background-color: rgba(228, 0, 0, 0.726);
+}
+
+.cadastro-container {
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+}
+
+.cadastro-container input {
+    margin-top: 20px;
+    height: 25px;
+    padding: 5px;
+    border: 0;
+    border-radius: 5px;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+.cadastro-container select {
+    margin-top: 20px;
+    height: 28px;
+    padding: 5px;
+    border: 0;
+    border-radius: 5px;
+    margin-left: 25px;
+    margin-right: 25px;
+    background-color: #fff;
+}
+
+.cadastro-container textarea {
+    margin-top: 20px;
+    padding: 5px;
+    border: 0;
+    height: 200px;
+    border-radius: 5px;
+    margin-left: 25px;
+    margin-right: 25px;
+}
